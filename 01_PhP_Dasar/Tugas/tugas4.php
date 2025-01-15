@@ -9,5 +9,23 @@ Tugas 4
  -->
 
  <?php
-  //
+
+function calculateTriangularPrismVolume($a, $b, $t) {
+
+    $triangleBaseArea = 0.5 * $a * $b;
+    
+    $volume = $triangleBaseArea * $t;
+    
+    return $volume;
+}
+
+// Nilai awal
+$a = 2;
+$b = 4; 
+$t = 15;
+
+$volume = calculateTriangularPrismVolume($a, $b, $t);
+
+
+echo "Volume dari prisma segitiga adalah $volume cm\n";
 ?>
