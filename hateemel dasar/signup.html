@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="signup-form">
+        <h1>Sign Up</h1>
+        <ul>
+            <form method="post" action="signup.php">
+                <li><label for="username">Username:</label></li>
+                <input type="text" id="username" name="username" required><br>
+                <li><label for="email">Email:</label></li>
+                <input type="email" id="email" name="email" required><br>
+                <li><label for="password">Password:</label></li>
+                <input type="password" id="password" name="password" required><br>
+                <li><label for="confirmpassword">Confirm Password:</label></li>
+                <input type="password" id="confirmpassword" name="confirmpassword" required><br>
+                <input type="submit" value="Sign Up">
+                <p>Already have an account? <a href="login.html">Log in here</a></p>
+            </form>
+        </ul>
+    </div>
+</body>
+</html>
