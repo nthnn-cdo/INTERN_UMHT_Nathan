@@ -8,27 +8,16 @@ contoh :
 -->
 
 <?php
-  function isPrime($number) {
-      // if ($number < 2) {
-      //     return false;
-      // }
-  
-      
-      for ($i = 2; $i <= sqrt($number); $i++) {
-          if ($number % $i == 0) {
-              return false;
-          }
-      }
-  
-      return true;
+$angka = 7;
+$count = 0;
+for ($i = 1; $i <= $angka; $i++) {
+  if ($angka % $i == 0) {
+    $count++;
   }
-  
-  $numberToCheck = 2;
-  
-  if (isPrime($numberToCheck)) {
-      echo "$numberToCheck adalah bilangan prima.";
-  } else {
-      echo "$numberToCheck bukan bilangan prima.";
-  }
-  
+}
+if ($count == 2) {
+  echo "$angka adalah bilangan prima\n";
+} else {
+  echo "$angka bukan bilangan prima\n";
+}
 ?>
