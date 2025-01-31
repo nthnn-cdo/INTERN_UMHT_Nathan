@@ -6,6 +6,8 @@
 // Contoh: http://localhost/02_PhP_WPU/Materi/Materi_9/03_GET.php?nama=Joni&umur=20
 // $_GET adalah array asosiatif, yang berarti variabel dalam $_GET diakses dengan menggunakan nama kunci (nama variabel).
 // Contoh: 
-$_GET["nama"] = "Sandika Galih";
+// $_GET["nama"] = "Sandika Galih";
+// $_GET["umur"] = 20;
+// $_GET["nrp"] = "009274612";
 var_dump($_GET);
 ?>
