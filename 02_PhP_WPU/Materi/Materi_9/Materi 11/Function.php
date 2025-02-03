@@ -28,7 +28,7 @@ function tambah($data){
     }
     $query = "INSERT INTO mahasiswa
                 VALUES 
-                ('','$nisn','$nama','$email','$jurusan','$gambar')";
+                ('','$nama','$jurusan','$email','$nisn','$gambar')";
     mysqli_query($conn, $query);
     
     return mysqli_affected_rows($conn);
@@ -94,11 +94,11 @@ function hapus($id){
 function update($data){
     global $conn;
 
-    $id = $data["id"];
-    $nisn = htmlspecialchars($data["nisn"]);
+    $id = $data['id'];
     $nama = htmlspecialchars($data["nama"]);
+    $jurusan =  htmlspecialchars($data["jurusan"]);
     $email = htmlspecialchars($data["email"]);
-    $jurusan =htmlspecialchars($data["jurusan"]);
+    $nisn = htmlspecialchars($data["nisn"]);
     $gambarlama = htmlspecialchars($data["gambarlama"]);
 
     if( $_FILES['gambar']['error'] === 4){

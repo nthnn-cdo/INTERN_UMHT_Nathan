@@ -39,6 +39,9 @@ if( isset($_POST["sumbit"])){
         <input type="hidden" name="gambarlama" value="<?= $mhs["gambar"];?>">
         <ul>
             <li>
+            <input type="hidden" name="id" id="id" requied value="<?= $mhs["id"]?>">
+            </li>
+            <li>
                 <label for="nama">NAMA :</label>
                 <input type="text" name="nama" id="nama" requied value="<?= $mhs["nama"]?>">
             </li>
