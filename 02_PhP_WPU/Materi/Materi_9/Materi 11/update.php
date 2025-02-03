@@ -35,8 +35,8 @@ if( isset($_POST["sumbit"])){
     <h1>update data mahasiswa</h1>    
 
 
-    <form action="" method="post">
-        <input type="hidden" name="id" value="<?= $mhs["id"];?>">
+    <form action="" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="gambarlama" value="<?= $mhs["gambar"];?>">
         <ul>
             <li>
                 <label for="nama">NAMA :</label>
@@ -56,7 +56,8 @@ if( isset($_POST["sumbit"])){
             </li>
             <li>
             <label for="gambar">GAMBAR :</label>
-            <input type="text" name="gambar" id="gambar"id="nama" requied value="<?= $mhs["gambar"]?>">
+            <img src="img/<?= $mhs['gambar'];?>" width="85"><br>
+            <input type="file" name="gambar" id="gambar"id="nama">
             </li>
             <li>
                 <button type="sumbit" name="sumbit">update data</button>

@@ -32,7 +32,7 @@ if( isset($_POST["sumbit"])){
     <h1>add data mahasiswa</h1>    
 
 
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
         <ul>
             <li>
                 <label for="nama">NAMA :</label>
@@ -52,7 +52,7 @@ if( isset($_POST["sumbit"])){
             </li>
             <li>
             <label for="gambar">GAMBAR :</label>
-            <input type="text" name="gambar" id="gambar">
+            <input type="file" name="gambar" id="gambar">
             </li>
             <li>
                 <button type="sumbit" name="sumbit">add data</button>

@@ -3,7 +3,7 @@ require 'Function.php';
 $mahasigma = query("SELECT * FROM mahasiswa");
 
 if( isset($_POST["cari"])){
-    $mahasiswa = cari($_POST["keyword"]);
+    $mahasigma = cari($_POST["keyword"]);
 }
 
 ?>
@@ -25,9 +25,7 @@ if( isset($_POST["cari"])){
 
 <form action="" method="post">
 
-    <input type="text" name="keyword" 
-    autofocus placeholder="masukan key search" 
-    autocomplete="off">
+    <input type="text" name="keyword" autofocus placeholder="search.." autocomplete="off">
     <button type="submit" name="cari">search</button>
 
 </form>
