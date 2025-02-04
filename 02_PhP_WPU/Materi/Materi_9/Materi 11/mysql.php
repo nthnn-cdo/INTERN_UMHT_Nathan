@@ -1,4 +1,10 @@
 <?php
+session_start();
+if ( !isset($_SESSION["login"])){
+    header("location:login.php");
+    exit;
+}
+
 require 'Function.php';
 $mahasigma = query("SELECT * FROM mahasiswa");
 
@@ -16,6 +22,8 @@ if( isset($_POST["cari"])){
     <title>halaman atmin</title>
 </head>
 <body>
+
+<a href="logout.php">logout</a>
 
 
 <h1>Daftar mahasiswa</h1>
