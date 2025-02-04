@@ -18,7 +18,7 @@ if( isset($_POST["cari"])){
 <body>
 
 
-<h1>daftar mahasiswa</h1>
+<h1>Daftar mahasiswa</h1>
 
 <a href="nambah.php">tambah data mahasiswa</a>
 <br><br>
