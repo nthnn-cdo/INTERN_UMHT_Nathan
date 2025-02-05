@@ -6,7 +6,11 @@ if ( !isset($_SESSION["login"])){
 }
 
 require 'Function.php';
-$mahasigma = query("SELECT * FROM mahasiswa");
+
+$jumlahdataperhalaman = 2;
+$jumlahdata = count(query("SELECT * FROM mahasiswa"));
+
+$mahasigma = query("SELECT * FROM mahasiswa LIMIT 0, $jumlahdataperhalaman");
 
 if( isset($_POST["cari"])){
     $mahasigma = cari($_POST["keyword"]);
