@@ -7,7 +7,7 @@ if ( !isset($_SESSION["login"])){
 
 require 'Function.php';
 
-$jumlahdataperhalaman = 2;
+$jumlahdataperhalaman = 5;
 $jumlahdata = count(query("SELECT * FROM mahasiswa"));
 
 $mahasigma = query("SELECT * FROM mahasiswa LIMIT 0, $jumlahdataperhalaman");
