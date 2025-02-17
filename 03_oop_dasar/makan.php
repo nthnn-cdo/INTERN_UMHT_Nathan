@@ -1,37 +1,40 @@
 <?php
 
-class makanan{
-    public $judul = "judul", 
-    $koki = "koki", 
-    $jenismakanan = "jenis makanan", 
-    $jenisminuman = "jenis minuman", 
+class makan{
+    public $namamakanan = "nama makanan", 
+    $namaminuman = "nama minuman",
+    $koki = "nama koki", 
+    $resep = "resep",
     $harga = 0;
 
-    public function hytam(){
-        return "$this->koki, $this->jenismakanan";
+    public function getmakan(){
+        return "$this->namamakanan, $this->namaminuman";
     }
 }
 
-$makanan1 = new makanan();
-$makanan1->judul = "jual makanan";
-$makanan1->koki = "padil";
-$makanan1->jenismakanan = "lumpia daging kuda";
-$makanan1->jenisminuman = "air putih";
-$makanan1->harga = 1000;
-echo "makanan india:".$makanan1->hytam();
+// $makan1 = new makan();
+// $makan1->namamakanan = "Nasi Goreng";
+// var_dump($makan1);
 
-// echo "igar : $makanan1->judul, $makanan1->jenismakanan";
+// $makan2 = new makan();
+// $makan2->namaminuman = "Es Teh";
+// $makan2->tambahminuman = "huhu";
+// var_dump($makan2);
 
+$makan3 = new makan();
+$makan3->namamakanan = "Nasi Goreng";
+$makan3->namaminuman = "Es Teh";
+$makan3->koki = "pedil";
+$makan3->resep = "nasi di goreng";
+$makan3->harga = 10000;
+
+$makan4 = new makan();
+$makan4->namamakanan = "cumi tepung";
+$makan4->namaminuman = "air putih";
+$makan4->koki = "igay";
+$makan4->resep = "cumi di tepungin";
+$makan4->harga = 5000;
+
+echo "list: ".$makan3->getmakan();
 echo "<br>";
-
-
-$makanan2 = new makanan();
-$makanan2->judul = "jual makanan";
-$makanan2->koki = "gwe";
-$makanan2->jenismakanan = "puding coklat";
-$makanan2->jenisminuman = "bawa sendiri";
-$makanan2->harga = 2000000000   ;
-
-echo "makanan manusia:" .$makanan2->hytam();
-
-?>
+echo "list:".$makan4->getmakan();
