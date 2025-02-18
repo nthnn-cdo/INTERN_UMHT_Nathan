@@ -1,0 +1,16 @@
+<?php
+
+require_once 'Makanan/infomakanan.php';
+require_once 'Makanan/list1.php';
+require_once 'Makanan/list2.php';
+require_once 'Makanan/Makan.php';
+require_once 'Makanan/cetakinfomakan.php';
+
+
+$makan1 = new list1( "Nasi Goreng", "Es teh", "pedil", "nasi di goreng", 10000, 10);
+$makan2 = new list2( "cumi tepung", "air putih", " igay", "cumi di tepungin", 5000,10);
+
+$cetakmakan = new cetakinfomakan();
+$cetakmakan->tambahmakan($makan1);
+$cetakmakan->tambahmakan($makan2);
+echo $cetakmakan->cetak();
