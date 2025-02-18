@@ -4,8 +4,9 @@ class makan{
     public $namamakanan, 
     $namaminuman,
     $koki, 
-    $resep,
-    $harga;
+    $resep;
+
+    protected $harga;
 
     public function __construct( $namamakanan = "nama makanan", $namaminuman = "nama minuman", $koki = "koki",
     $resep = "resep", $harga = 0)  {
@@ -81,3 +82,6 @@ $makan2 = new list2( "cumi tepung", "air putih", " igay", "cumi di tepungin", 50
 echo $makan1->getinfomakan();
 echo "<br>";
 echo $makan2->getinfomakan();
+echo "<hr>";
+
+echo $makan2->getharga();
