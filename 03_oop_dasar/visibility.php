@@ -5,8 +5,9 @@ class makan{
     $namaminuman,
     $koki, 
     $resep;
-
-    protected $harga;
+    
+    protected $diskon = 0;
+    private $harga;
 
     public function __construct( $namamakanan = "nama makanan", $namaminuman = "nama minuman", $koki = "koki",
     $resep = "resep", $harga = 0)  {
@@ -16,6 +17,11 @@ class makan{
         $this->resep = $resep;
         $this->harga = $harga;
 
+    }
+
+
+    public function getharga() {
+        return $this->harga - ($this->harga * $this->diskon / 90);
     }
 
     public function getmakan(){
@@ -60,6 +66,11 @@ class makan{
             $this->jmlpersediaan = $jmlpersediaan;
         }
 
+        public function setdiskon( $diskon ) {
+            $this->diskon = $diskon;
+        }
+    
+
         public function getinfomakan(){
             $str = "list 2 :  ". parent::getinfomakan()." ~ ($this->jmlpersediaan) tersedia.";
             return $str;
@@ -84,4 +95,5 @@ echo "<br>";
 echo $makan2->getinfomakan();
 echo "<hr>";
 
+$makan2->setdiskon(0);
 echo $makan2->getharga();
