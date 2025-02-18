@@ -4,10 +4,9 @@ class Makan{
     private $judulmakanan, 
     $judulminuman,
     $koki, 
-    $resep;
-    
-    protected $diskon = 0;
-    private $harga;
+    $resep,
+    $harga,
+    $diskon = 0;
 
     public function __construct( $judulmakanan = "nama makanan", $judulminuman = "nama minuman", $koki = "koki",
     $resep = "resep", $harga = 0)  {
@@ -19,8 +18,40 @@ class Makan{
 
     }
 
+    public function setjudul( $judulmakanan ) {
+        $this->judulmakanan = $judulmakanan;
+    }
+
+    public function setkoki( $koki ) {
+        $this->koki = $koki;
+    }
+
+    public function getkoki(){
+        return $this->koki;
+    }
+
+    public function setresep( $resep ){
+        $this->resep = $resep;
+    }
+
+    public function getresep( $resep ){
+        return $this->resep;
+    }
+
     public function getjudulmakanan() {
         return $this->judulmakanan;
+    }
+
+    public function setdiskon( $diskon ) {
+        $this->diskon = $diskon;
+    }
+
+    public function getdiskon(){
+        return $this->diskon;
+    }
+
+    public function setharga( $harga ){
+        $this->harga = $harga;
     }
 
 
@@ -69,10 +100,6 @@ class Makan{
 
             $this->jmlpersediaan = $jmlpersediaan;
         }
-
-        public function setdiskon( $diskon ) {
-            $this->diskon = $diskon;
-        }
     
 
         public function getinfomakan(){
@@ -103,4 +130,5 @@ $makan2->setdiskon(0);
 echo $makan2->getharga();
 echo "<hr>";
 
-echo $makan1->getjudulmakanan();
+$makan1->setkoki("guah");
+echo $makan1->getkoki();
