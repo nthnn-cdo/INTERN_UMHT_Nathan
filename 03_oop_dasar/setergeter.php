@@ -1,6 +1,6 @@
 <?php
 
-class makan{
+class Makan{
     private $judulmakanan, 
     $judulminuman,
     $koki, 
@@ -39,7 +39,7 @@ class makan{
 }
 
 
-    class list1 extends makan{
+    class list1 extends Makan{
         public $jmlhidangan;
 
         public function __construct( $judulmakanan = "nama makanan", $judulminuman = "nama minuman", $koki = "koki",
@@ -59,7 +59,7 @@ class makan{
         }
     }
 
-    class list2 extends makan{
+    class list2 extends Makan{
         public $jmlhidangan;
 
         public function __construct( $judulmakanan = "nama makanan", $judulminuman = "nama minuman", $koki = "koki",
@@ -85,8 +85,8 @@ class makan{
 
 
     class cetakinfomakan{
-        public function cetak( makan $makan ){
-            $str = "{$makan->judulmakanan} | {$makan->getmakan()}, (Rp. {$makan->harga})";
+        public function cetak( Makan $Makan ){
+            $str = "{$Makan->judulmakanan} | {$Makan->getmakan()}, (Rp. {$Makan->harga})";
             return $str;
         }
     }
@@ -103,4 +103,4 @@ $makan2->setdiskon(0);
 echo $makan2->getharga();
 echo "<hr>";
 
-echo $makan1->getjudulmakanan;
+echo $makan1->getjudulmakanan();
