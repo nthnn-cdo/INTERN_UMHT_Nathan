@@ -12,4 +12,9 @@ require_once 'App/init.php';
 // echo $cetakmakan->cetak();
 
 
-new App\Service\User();
+use App\Service\User as ServiceUser;
+use App\Makanan\User as MakananUser;
+
+new ServiceUser();
+echo "<br>";
+new MakananUser();
