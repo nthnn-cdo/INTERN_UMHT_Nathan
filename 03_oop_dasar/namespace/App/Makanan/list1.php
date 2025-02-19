@@ -1,5 +1,5 @@
-<?php
-    class list1 extends Makan implements infomakanan{
+<?php    
+class list1 extends Makan implements infomakanan{
         public $jmlhidangan;
 
         public function __construct( $judulmakanan = "nama makanan", $judulminuman = "nama minuman", $koki = "koki",
@@ -22,4 +22,3 @@
 
         }
     }
-

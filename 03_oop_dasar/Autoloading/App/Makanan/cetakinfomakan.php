@@ -1,5 +1,5 @@
 <?php
-class cetakinfomakan{
+    class cetakinfomakan{
         public $daftarmakanan = [];
 
         public function tambahmakan(Makan $Makan) {

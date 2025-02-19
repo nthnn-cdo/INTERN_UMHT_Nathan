@@ -1,5 +1,4 @@
 <?php
-
 abstract class Makan{
     protected $judulmakanan, 
     $judulminuman,

@@ -1,10 +1,6 @@
 <?php
 
-require_once 'Makanan/infomakanan.php';
-require_once 'Makanan/list1.php';
-require_once 'Makanan/list2.php';
-require_once 'Makanan/Makan.php';
-require_once 'Makanan/cetakinfomakan.php';
+require_once 'App/init.php';
 
 
 $makan1 = new list1( "Nasi Goreng", "Es teh", "pedil", "nasi di goreng", 10000, 10);
